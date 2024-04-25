@@ -4,7 +4,7 @@ let NavMobile = ({open, close, isClosed}) => {
         console.log(`clicked, close is ${close}`);
     }
     return (
-        <div className={`${close ? 'hidden': 'block'} navbar-mobile bg-red-400 h-96 md:hidden absolute right-0 left-0 top-14 z-50`}>
+        <div className={`${close ? 'hidden': 'block'} navbar-mobile bg-gray-700 h-96 md:hidden absolute right-0 left-0 top-14 z-50`}>
         <div>
         <div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-14 h-14 mx-auto">

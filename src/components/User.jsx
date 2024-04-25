@@ -12,7 +12,7 @@ let User = () => {
     <div className='relative flex'>
             <Sidebar open = {open} />
 
-        <div className='flex-1 bg-yellow-300 h-screen'>
+        <div className='flex-1 bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400'>
             <Navbar open = {open} isOpen = {isOpen} close = {close} isClosed={isClosed} />
 
             <NavMobile close = {close} isClosed={isClosed} />
