@@ -10,9 +10,9 @@ let Navbar = ({open, isOpen, isClosed, close}) => {
     return (
         <div className={`navbar bg-gray-800 flex justify-between items-center duration-300`}>
         <div className="flex items-center gap-2">
-        <svg onClick={show} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12 cursor-pointer">
+        {/* <svg onClick={show} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12 cursor-pointer">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-        </svg>
+        </svg> */}
         <img src="/images/ncaa.png" className="w-20 xs:max-lg:w-14" alt="ncaa logo" />
         </div>
 
