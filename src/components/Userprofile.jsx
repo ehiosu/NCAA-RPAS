@@ -16,15 +16,15 @@ let userprofile = () => {
 
                 <div className="pt-4">
                    <div>
-                        <div className="flex justify-around">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fillRule="currentColor" className="w-24 h-24">
+                        <div className="lg:flex justify-around">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fillRule="currentColor" className="w-24 h-24 xs:max-lg:mx-auto">
                         <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
                         </svg>
 
-                        <form>
+                        <form className='space-y-2'>
                         <div>
                             <label>User ID*</label>
-                            <input type="text" placeholder="JGS-001" />
+                            <input type="text" placeholder="JGS-001" className="rounded-lg bg-gray-400" />
                         </div>
                         <div>
                             <label>Title*</label>
@@ -37,22 +37,22 @@ let userprofile = () => {
                         </div>
                         <div>
                             <label>DOB*</label>
-                            <input type="text" />
+                            <input type="text" className="rounded-lg bg-gray-400" />
                         </div>
                         </form>
 
-                        <form>
+                        <form className='space-y-2'>
                         <div>
                             <label>First Name*</label>
-                            <input type="text"/>
+                            <input type="text" className="rounded-lg bg-gray-400"/>
                         </div>
                         <div>
                             <label>Middle Name*</label>
-                            <input type="text"/>
+                            <input type="text" className="rounded-lg bg-gray-400"/>
                         </div>
                         <div>
                             <label>last Name*</label>
-                            <input type="text"/>
+                            <input type="text" className="rounded-lg bg-gray-400"/>
                         </div>
                         </form>
                         </div>
@@ -63,9 +63,9 @@ let userprofile = () => {
                 <div className="p-4 bg-white border border-gray-200 rounded-lg">
                 <p>Contact Information</p>
 
-                <div className='flex justify-around'>
-                         <form>
-                         <div>
+                <div className='lg:flex justify-around'>
+                         <form className='space-y-2'>
+                         <div className='flex items-center gap-2'>
                            <label>Mobile Number</label>
                            <div className="flex items-center">
                            <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
@@ -74,12 +74,12 @@ let userprofile = () => {
                            </div>
                            <label htmlFor="phone-input" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Phone number:</label>
                            <div className="relative w-full">
-                           <input type="text" id="phone-input" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border" pattern="" placeholder="80xxxxxxxx" required />
+                           <input type="text" maxLength="10" id="phone-input" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-400 rounded-e-lg border-s-0 border " pattern="\d*" placeholder="80xxxxxxxx" required />
                            </div>
                            </div>
                          </div>
              
-                         <div>
+                         {/* <div>
                  <label>Telephone number</label>
                  <div className="flex items-center">
                      <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
@@ -88,59 +88,62 @@ let userprofile = () => {
                      </div>
                      <label htmlFor="phone-input" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Phone number:</label>
                      <div className="relative w-full">
-                         <input type="text" id="phone-input" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border" pattern="" placeholder="80xxxxxxxx" required />
+                         <input type="text" id="phone-input" maxLength="10" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-400 rounded-e-lg border-s-0 border" pattern="\d*" placeholder="80xxxxxxxx" required />
                      </div>
                  </div>
-                         </div>
+                         </div> */}
              
-                 <div className="flex items-center gap-2">
+                 <div className="flex items-center justify-around gap-2">
                      <label>Address</label>
-                     <textarea rows="4" /> 
+                     <textarea rows="4" className="rounded-lg bg-gray-400"/> 
                  </div>
              
-                 <div>
+                 <div className='flex justify-around'>
                      <label>State</label>
                      <select id="countries" className=" rounded-lg bg-gray-300 p-2 text-gray-500">
                  <option defaultValue>Select state</option>
                  {
-                     states.map((i) => {
-                             return <option>{i}</option>
+                     states.map((i,j) => {
+                             return <option key={j}>{i}</option>
                          })
                  }
                </select>
                  </div>
              
-                 <div>
+                 <div className='flex justify-around items-center'>
                      <label>Local government</label>
                      <select id="countries" className=" rounded-lg bg-gray-300 p-2 text-gray-500">
                  <option defaultValue>Select Local Government</option>
                  {
-                     states.map((i) => {
-                             return <option>{i}</option>
+                     states.map((i,j) => {
+                             return <option key={j}>{i}</option>
                          })
                  }
                </select>
                  </div>
                     </form>
 
-                <form>
-                    <div>
+                <form className='space-y-2'>
+                    <div className='flex justify-around items-center'>
                     <label htmlFor="email">Email</label>
-                    <input type='text' />
+                    <input type='text' className="rounded-lg bg-gray-400" />
                     </div>
-                    <div>
+                    <div className='flex justify-around items-center'>
                     <label htmlFor="alt-email">Alternative Email</label>
-                    <input type='text' />
+                    <input type='text' className="rounded-lg bg-gray-400" />
                     </div>
-                    <div>
+                    <div className='flex justify-around items-center'>
                     <label htmlFor="additional">Additional information</label>
-                    <textarea rows="4" />
+                    <textarea rows="4" className="rounded-lg bg-gray-400" />
                     </div>
                 </form>
 
                 </div>
                 </div>
 
+                <div className="pt-4 flex justify-end">
+                <button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Continue</button>
+                </div>
             </div>
 
         </div>

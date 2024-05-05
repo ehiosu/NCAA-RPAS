@@ -11,16 +11,16 @@ let Dronedetails = () => {
                     <form className="space-y-3">
                         <div>
                             <label>Proof of ownership of the RPA</label>
-                            <input type="file" className="bg-gray-400" />
+                            <input type="file" className="bg-gray-400 rounded-lg xs:max-lg:w-4/5" />
                         </div>
                         <div>
                             <label>Date of Birth (16yrs and above)</label>
-                            <input type="file" className="bg-gray-400" />
+                            <input type="file" className="bg-gray-400 rounded-lg xs:max-lg:w-4/5" />
                         </div>
                         <div>
                             <label>Identification Type</label>
-                            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2">
-                            <option selected>---</option>
+                            <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2">
+                            <option defaultValue>---</option>
                             <option value="passport">International Passport</option>
                             <option value="nin">National Identification Number</option>
                             <option value="licence">Driver's Licence</option>
@@ -32,7 +32,7 @@ let Dronedetails = () => {
                         </div>
                         <div>
                             <label>Copy of Bio-Data page</label>
-                            <input type="file" className="bg-gray-400" />
+                            <input type="file" className="bg-gray-400 rounded-lg xs:max-lg:w-4/5" />
                         </div>
                         <p className="text-lg">Accept Terms and Conditions</p>
                         <div className="flex items-start gap-2">

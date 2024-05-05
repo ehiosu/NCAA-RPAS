@@ -83,7 +83,7 @@ let Dashboard = () => {
         Yuneec
     </td>
     <td className="px-6 py-4">
-        Recreational
+        Government
     </td>
     <td className="px-6 py-4">
         Registered
