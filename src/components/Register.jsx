@@ -39,8 +39,6 @@ let Register = () => {
 
             <div className="w-full"><button className="bg-blue-400 px-6 py-3 rounded-lg font-bold text-white w-full">Create account</button></div>
             </div>
-
-            
         </form>
     </div>
     </div>

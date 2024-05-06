@@ -7,6 +7,7 @@ import Userprofile from './Userprofile';
 import Navbar from './Navbar';
 import Sidebar from "./Sidebar";
 import Dronedetails2 from "./Dronedetails2";
+import Content from "./Content";
 
 // import '../flowbite/dist/flowbite.min.js';
 
@@ -18,13 +19,7 @@ let Stuff = () => {
 
 <div className="p-4 pt-6 sm:ml-64">
   <div className="mt-12">
-        <Userprofile />
-        <Dashboard />
-        <Freshissue />
-        <Droneupload />
-        <Dronedetails />
-        <Appsuccess />
-        <Dronedetails2 />
+    <Content />
   </div>
 </div>
 

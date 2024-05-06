@@ -9,7 +9,7 @@ let Dronedetails2 = () => {
             <path d="M4.5 4.5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h8.25a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3H4.5ZM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06Z" />
             </svg>
 
-            <form className="space-y-1">
+            {/* <form className="space-y-1">
                 <div className="flex gap-1 items-center justify-evenly">
                     <label>Manufacturer</label>
                     <input type="text" className="rounded-lg bg-gray-400" />
@@ -34,11 +34,29 @@ let Dronedetails2 = () => {
                     <label>Description of Operation</label>
                     <textarea rows="4" className="rounded-lg bg-gray-400" />
                 </div>
-            </form>
+            </form> */}
 
-            <div className="pt-4">
+            <form>
+                <div className="grid grid-cols-2 space-y-2 items-center xs:max-lg:text-sm">
+                <label>Manufacturer</label>
+                <input type="text" className="rounded-lg" />
+                <label>Serial number</label>
+                <input type="text" className="rounded-lg" />
+                <label>Model</label>
+                <input type="text" className="rounded-lg" />
+                <label>Mass (K.g.)</label>
+                <input type="number" pattern="\d*" className="rounded-lg" />
+                <label>Date Manufactured</label>
+                <Datepicker />
+                <label>Description of Operation</label>
+                <textarea rows="4" className="rounded-lg" />
+                </div>
+                <div className="pt-4">
             <button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Back</button>
             </div>
+            </form>
+
+            
 
             </div>
         </div>
