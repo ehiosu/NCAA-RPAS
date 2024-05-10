@@ -8,6 +8,7 @@ import Droneupload from './Droneupload';
 import Appsuccess from './Appsuccess';
 import Dronedetails2 from './Dronedetails2';
 import Specificphase from './Specificphase';
+import Settings from './Settings';
 
 let Content = () => {
     let [cont, changeContent] = useState();
@@ -15,13 +16,14 @@ let Content = () => {
         return (
         <div className={`content`} >
             <Userprofile />
+            {/* <Settings />
             <Dashboard />
             <Freshissue />
             <Droneupload />
             <Dronedetails />
             <Appsuccess />
             <Dronedetails2 />
-            <Specificphase />
+            <Specificphase /> */}
 
         </div>
     )

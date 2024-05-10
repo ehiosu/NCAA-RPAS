@@ -1,7 +1,16 @@
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 import { Datepicker} from "flowbite-react";
+import {Link} from 'react-router-dom';
 let Dronedetails = () => {
     return (
-        <div className="p-2">
+        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400">
+        <Navbar />
+        <Sidebar />
+    
+    <div className="p-4 pt-6 sm:ml-64">
+      <div className="mt-12">
+      <div className="p-2">
             <p className="text-4xl pb-4">Drone Details</p>
             
             <div className="p-4 bg-white border border-gray-200 rounded-lg">
@@ -37,11 +46,15 @@ let Dronedetails = () => {
                         </div>
                     </div>
                     <div className="flex justify-between">
-                        <button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Back</button>
+                        <Link to='/droneupload'><button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Back</button></Link>
                         <button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Next</button>
                         </div>
                 </form>
             </div>
+        </div>
+      </div>
+    </div>
+    
         </div>
     )
 }

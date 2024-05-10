@@ -1,8 +1,8 @@
 // import {useState} from 'react';
+import {Link} from 'react-router-dom'
 let Sidebar = () => {
-
     return (
-        <aside id="logo-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-blue-950 sm:translate-x-0" aria-label="Sidebar">
+        <aside id="sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-blue-950 sm:translate-x-0" aria-label="Sidebar">
    <div className=" ">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-21 h-21 mx-auto">
@@ -15,15 +15,15 @@ let Sidebar = () => {
 
                 <hr />
 
-                   <div className='pt-6 space-y-4'>
-                    <p className='hover:bg-gray-100 cursor-pointer text-xl'>Dashboard</p>
+                   <div className='pt-6 space-y-4 text-center'>
+                    <Link reloadDocument to='/dashboard'><p className='hover:bg-gray-100 cursor-pointer text-xl '>Dashboard</p></Link>
                     <div>
-                        <p className='md:text-xl'>Register Drone</p>
-                        <p className='hover:bg-gray-100 cursor-pointer'>-Fresh Issue</p>
+                        <p className='md:text-xl text-white font-bold'>Register Drone</p>
+                        <Link reloadDocument to='/freshissue'><p className='hover:bg-gray-100 cursor-pointer'>-Fresh Issue</p></Link>
                         <p className='hover:bg-gray-100 cursor-pointer'>-Variation</p>
                     </div>
                     <div>
-                        <p className='md:text-xl'>Report to NCAA</p>
+                        <p className='md:text-xl text-white font-bold'>Report to NCAA</p>
                         <p className='hover:bg-gray-100  cursor-pointer'>-Incident / Accident Report</p>
                         <p className='hover:bg-gray-100  cursor-pointer'>-Resell Drone</p>
                     </div>

@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 let Appsuccess = () => {
     return (
         <div className="space-y-2 pt-20">
@@ -5,7 +6,7 @@ let Appsuccess = () => {
                 <p className="text-2xl">Your application has been submitted, you will receive feedback in 2-4 working dats</p>
             </div>
             <div className="flex justify-center">
-            <button className=" bg-blue-400 p-2 pl-4 pr-4 rounded-md text-white">Go to Dashboard</button>
+            <Link reloadDocument to='/dashboard'><button className=" bg-blue-400 p-2 pl-4 pr-4 rounded-md text-white">Go to Dashboard</button></Link>
             </div>
         </div>
     )

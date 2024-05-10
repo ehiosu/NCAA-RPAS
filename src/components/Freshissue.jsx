@@ -1,6 +1,17 @@
+import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
+import {Link} from 'react-router-dom';
 let Freshissue = () => {
     return (
-        <div className="p-2">
+       
+
+<div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400">
+<Navbar />
+<Sidebar />
+
+<div className="p-4 pt-6 sm:ml-64">
+<div className="mt-12">
+<div className="p-2">
             <p className="text-4xl">Fresh Issue</p>
 
         <div className="p-4 space-y-4">
@@ -18,7 +29,7 @@ let Freshissue = () => {
         <p className="pt-4 text-lg">Register UAS/ Drone for Private, Sport and Recreational</p>
 
         <div className="pt-4 flex justify-end">
-            <button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Register</button>
+            <Link reloadDocument to='/droneupload'><button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Register</button></Link>
         </div>
         </div>
 
@@ -35,7 +46,7 @@ let Freshissue = () => {
         <p className="pt-4 text-lg">Register UAS/ Drone for Small scale business i.e. weddings, youtube etc</p>
 
         <div className="pt-4 flex justify-end">
-            <button className="bg-green-400 p-2 pl-4 pr-4 rounded-md">Register</button>
+            <Link reloadDocument to='/droneupload'><button className="bg-green-400 p-2 pl-4 pr-4 rounded-md">Register</button></Link>
         </div>
         </div>
 
@@ -52,7 +63,7 @@ let Freshissue = () => {
         <p className="pt-4 text-lg">Register UAS/ Drone for Commercial & Government use.</p>
 
         <div className="pt-4 flex justify-end">
-            <button className="bg-yellow-400 p-2 pl-4 pr-4 rounded-md">Register</button>
+            <Link reloadDocument to='/droneupload'><button className="bg-yellow-400 p-2 pl-4 pr-4 rounded-md">Register</button></Link>
         </div>
         </div>
 
@@ -60,6 +71,10 @@ let Freshissue = () => {
 
 
         </div>
+</div>
+</div>
+
+</div>
     )
 }
 

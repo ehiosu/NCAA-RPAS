@@ -62,8 +62,8 @@ let Specificphase = () => {
         stuff
     </td>
     <td className="px-6 py-4">
-    <input type="file" id="files" class="hidden"/>
-    <label for="files" className="bg-green-300 p-2 rounded-md cursor-pointer">Upload</label>
+    <input type="file" id="files" className="hidden"/>
+    <label htmlFor="files" className="bg-green-300 p-2 rounded-md cursor-pointer">Upload</label>
     </td>
 </tr>
 </tbody>

@@ -15,7 +15,7 @@ let Login = () => {
                     <p className="md:text-lg xs:text-xs pt-2">Forgot your password? <span className="cursor-pointer text-blue-700">Reset Password</span></p>
                 </div>
 
-                <div className="w-full"><button className="bg-blue-400 px-6 py-3 rounded-lg font-bold text-white w-full">Login</button></div>
+                <Link to='/stuff'><div className="w-full"><button className="bg-blue-400 px-6 py-3 rounded-lg font-bold text-white w-full">Login</button></div></Link>
                 </div>
             </form>
         </div>

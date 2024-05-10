@@ -1,9 +1,19 @@
 import {Nigeria} from './Nigeria';
+import {useState} from 'react';
+import {Link} from 'react-router-dom';
 
-let userprofile = () => {
+let Userprofile = () => {
+
     let states = Nigeria.map((i) => {
         return i.state;
     });
+
+    let lgas = Nigeria.map((i) => {
+        return i.lgas;
+    })
+
+    let [ngstate, selectState] = useState();
+
     return (
         <div className="p-2 space-y-2">
 
@@ -55,11 +65,11 @@ let userprofile = () => {
                 <div className="p-4 bg-white border border-gray-200 rounded-lg">
                 <p>Contact Information</p>
 
-                <form className='md:flex justify-between xs:max-lg:space-y-2'>
+                <form className='md:flex justify-around items-center xs:max-lg:space-y-2'>
                 <div className='grid grid-cols-2 space-y-2 items-center'>
                     <label className=''>Mobile Number</label>
                     <div className="flex items-center">
-                    <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+                    <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="#fff" d="M10 4H22V28H10z"></path><path d="M5,4h6V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" fill="#3b8655"></path><path d="M25,4h6V28h-6c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" transform="rotate(180 26 16)" fill="#3b8655"></path><path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path><path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path></svg>
                    +234
                     </div>
@@ -71,7 +81,7 @@ let userprofile = () => {
 
                    <label>Alternate Number</label>
                     <div className="flex items-center">
-                    <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+                    <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700  dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="#fff" d="M10 4H22V28H10z"></path><path d="M5,4h6V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" fill="#3b8655"></path><path d="M25,4h6V28h-6c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" transform="rotate(180 26 16)" fill="#3b8655"></path><path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path><path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path></svg>
                    +234
                     </div>
@@ -85,7 +95,7 @@ let userprofile = () => {
                      <textarea rows="4" className="rounded-lg"/> 
 
                     <label>State</label>
-                     <select id="countries" className=" rounded-lg p-2 text-gray-500">
+                     <select id="state" className=" rounded-lg p-2 text-gray-500">
                     <option defaultValue>Select state</option>
                  {
                      states.map((i,j) => {
@@ -95,7 +105,7 @@ let userprofile = () => {
                      </select>
 
                      <label>Local government</label>
-                     <select id="countries" className=" rounded-lg p-2 text-gray-500">
+                     <select id="lga" className=" rounded-lg p-2 text-gray-500">
                  <option defaultValue>Select Local Government</option>
                  {
                      states.map((i,j) => {
@@ -118,7 +128,7 @@ let userprofile = () => {
                 </div>
 
                 <div className="pt-4 flex justify-end">
-                <button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Continue</button>
+                <Link reloadDocument to='/dashboard'><button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Continue</button></Link>
                 </div>
             </div>
 
@@ -127,4 +137,4 @@ let userprofile = () => {
     )
 }
 
-export default userprofile;
+export default Userprofile;

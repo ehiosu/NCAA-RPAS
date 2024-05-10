@@ -1,6 +1,17 @@
+import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
+import { useEffect } from 'react';
+import { initFlowbite } from 'flowbite';
 let Dashboard = () => {
     return (
-        <div className="p-2">
+
+<div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400">
+<Navbar />
+<Sidebar />
+
+<div className="p-4 pt-6 sm:ml-64">
+<div className="mt-12">
+<div className="p-2">
             <p className='text-4xl'>Dashboard</p>
 
 <div className='md:flex justify-around p-4 xs:max-lg:space-y-2'>
@@ -177,6 +188,11 @@ let Dashboard = () => {
 </table>
 </div>
             </div>
+
+</div>
+</div>
+
+</div>
     )
 }
 

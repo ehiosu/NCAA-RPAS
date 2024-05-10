@@ -27,7 +27,7 @@ let Nigeria = [
     {
         "state": "Adamawa",
         "lgas": [
-            "Demsa",
+            "Demsa",    
             "Fufore",
             "Ganye",
             "Girei",
