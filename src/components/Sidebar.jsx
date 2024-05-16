@@ -24,11 +24,11 @@ let Sidebar = () => {
                     </div>
                     <div>
                         <p className='md:text-xl text-white font-bold'>Report to NCAA</p>
-                        <p className='hover:bg-gray-100  cursor-pointer'>-Incident / Accident Report</p>
-                        <p className='hover:bg-gray-100  cursor-pointer'>-Resell Drone</p>
+                        <Link reloadDocument to='/reportincident'><p className='hover:bg-gray-100  cursor-pointer'>-Incident / Accident Report</p></Link>
+                        <Link reloadDocument to='/reselldrone'><p className='hover:bg-gray-100 cursor-pointer'>-Resell Drone</p></Link>
                     </div>
-                    <p className='hover:bg-gray-100 cursor-pointer md:text-xl'>Renewal of ROC</p>
                    </div>
+                   <Link reloadDocument to='/renewcertificate'><div className='pt-4'><p className='hover:bg-gray-100 cursor-pointer md:text-lg text-center'>Renewal of ROC</p></div></Link>
                 </div>
               </div>
 </aside>

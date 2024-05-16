@@ -1,5 +1,7 @@
+import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
 import {Nigeria} from './Nigeria';
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
 let Userprofile = () => {
@@ -14,7 +16,28 @@ let Userprofile = () => {
 
     let [ngstate, selectState] = useState();
 
+    const fileInputRef = useRef(null);
+
+    const handleImageChange = (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          // Do something with the file content, e.g., display it
+          console.log("File content:", e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+
     return (
+        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 min-h-screen">
+        <Navbar />
+        <Sidebar />
+
+    <div className="p-4 pt-6 sm:ml-64">
+    <div className="mt-12">
+        <div className="p-2">
         <div className="p-2 space-y-2">
 
             <p className="text-4xl pb-4">User Profile</p>
@@ -27,9 +50,21 @@ let Userprofile = () => {
                 <div className="pt-4">
                    <div>
                         <div className="md:flex justify-between items-center xs:max-lg:space-y-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fillRule="currentColor" className="w-24 h-24 xs:max-lg:mx-auto">
-                        <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
-                        </svg>
+                        
+
+            <div className="cursor-pointer hover:underline hover:text-blue-500" onClick={() => fileInputRef.current.click()}>
+                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fillRule="currentColor" className=" w-24 h-24 mx-auto">
+                <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+                </svg>
+                <p className="text-center ">upload profile picture</p>
+                <input
+                type="file"
+                ref={fileInputRef}
+                style={{ display: 'none' }}
+                accept="image/*"
+                onChange={handleImageChange}
+                 />
+            </div>
 
                         <form className=''>
                             <div className='grid grid-flow-row-dense grid-cols-2 space-y-2 items-center'>
@@ -133,6 +168,12 @@ let Userprofile = () => {
             </div>
 
         </div>
+        </div>
+    </div>
+    </div>
+        </div>
+
+
 
     )
 }

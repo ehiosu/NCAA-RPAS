@@ -5,7 +5,7 @@ let Freshissue = () => {
     return (
        
 
-<div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400">
+<div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 min-h-screen">
 <Navbar />
 <Sidebar />
 

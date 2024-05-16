@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 let Login = () => {
     return (
-        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 h-screen">
+        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 h-screen min-h-screen">
             <div className="pt-20">
             <img src="/images/ncaa.png" alt="ncaa logo" className="mx-auto" />
             <p className="text-4xl font-bold text-center p-6">Sign in</p>
@@ -15,7 +15,7 @@ let Login = () => {
                     <p className="md:text-lg xs:text-xs pt-2">Forgot your password? <span className="cursor-pointer text-blue-700">Reset Password</span></p>
                 </div>
 
-                <Link to='/stuff'><div className="w-full"><button className="bg-blue-400 px-6 py-3 rounded-lg font-bold text-white w-full">Login</button></div></Link>
+                <Link to='/userprofile'><div className="w-full"><button className="bg-blue-400 px-6 py-3 rounded-lg font-bold text-white w-full">Login</button></div></Link>
                 </div>
             </form>
         </div>

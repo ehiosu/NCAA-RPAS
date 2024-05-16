@@ -1,5 +1,8 @@
-import { Datepicker } from "flowbite-react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import {useState} from 'react';
 let Specificphase = () => {
+    let [startDate, setStartDate] = useState(new Date());
     return (
         <div className="p-2">
             <p className="text-4xl pb-4">Specific phase</p>
@@ -18,8 +21,7 @@ let Specificphase = () => {
                     <label>Registration number of company </label>
                     <input type="text" pattern="\d*" maxLength="11" className=" p-2 rounded-lg" />
                     <label>Date of Registration of company</label>
-                    <Datepicker color="light" className="w" />
-                    <label>Upload CAC*</label>
+                    <DatePicker className="w-full rounded-lg bg-gray-300 cursor-pointer" showIcon  showYearDropdown dateFormat='dd/MM/yyyy' enableTabLoop={false} selected={startDate} onChange={(date) => setStartDate(date)}  />                    <label>Upload CAC*</label>
                     <input type="file" className="bg-gray-400 rounded-lg xs:max-lg:w-full" />
                     <label>Upload C07*</label>
                     <input type="file" className="bg-gray-400 rounded-lg xs:max-lg:w-full" />

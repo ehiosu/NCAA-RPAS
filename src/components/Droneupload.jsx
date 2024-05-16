@@ -1,12 +1,13 @@
-import { Datepicker} from "flowbite-react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import {useState} from 'react';
 import {Link} from 'react-router-dom'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 let Droneupload = () => {
+    let [startDate, setStartDate] = useState(new Date());
     return (
-   
-
-<div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400">
+<div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 min-h-screen">
 <Navbar />
 <Sidebar />
 
@@ -27,7 +28,7 @@ let Droneupload = () => {
                     <label>Aircraft Serial number *</label>
                     <input type="text" className="rounded-lg"/>
                     <label>Date of Manufacture</label>
-                    <Datepicker className="text-center"/>
+                    <DatePicker className="w-full rounded-lg bg-gray-300 cursor-pointer" showIcon  showYearDropdown dateFormat='dd/MM/yyyy' enableTabLoop={false} selected={startDate} onChange={(date) => setStartDate(date)}  />
                     <label>Maximum take-off mass (kg) *</label>
                     <input type="number" className="rounded-lg"/>
                     <label>Upload drone photo</label>
@@ -38,7 +39,7 @@ let Droneupload = () => {
                     <div className="flex justify-between pt-2">
                         <Link to='/freshissue'><button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Back</button></Link>
                         <Link to='/dronedetails'><button className="bg-blue-400 p-2 pl-4 pr-4 rounded-md">Next</button></Link>
-                        </div>
+                    </div>
                 </form>
             </div>
 

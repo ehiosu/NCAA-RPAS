@@ -1,9 +1,12 @@
 import {Link} from 'react-router-dom'
 import {countryList2} from './Countries';
-import { Datepicker} from "flowbite-react";
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 let Register = () => {
+    let [startDate, setStartDate] = useState(new Date());
     return (
-        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 ">
+        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 min-h-screen">
         <div className="">
         <img src="/images/ncaa.png" alt="ncaa logo" className="mx-auto" />
         <p className="text-4xl font-bold text-center p-6">Create Account</p>
@@ -14,9 +17,7 @@ let Register = () => {
             <input type="email" placeholder="Email" className="bg-gray-300 p-2 rounded-lg"  />
             
             <label className='text-white' >Date of Birth</label>
-            <Datepicker title='Date of Birth' placeholder='date' color="light"/>
-
-
+            <DatePicker className="w-full rounded-lg bg-gray-300 cursor-pointer" showIcon  showYearDropdown dateFormat='dd/MM/yyyy' enableTabLoop={false} selected={startDate} onChange={(date) => setStartDate(date)}  />
 
 <select id="countries" className=" rounded-lg bg-gray-300 p-2 text-gray-500">
     <option defaultValue>Select Country</option>

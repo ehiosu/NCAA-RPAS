@@ -9,21 +9,23 @@ import Appsuccess from './Appsuccess';
 import Dronedetails2 from './Dronedetails2';
 import Specificphase from './Specificphase';
 import Settings from './Settings';
+import Reportincident from './Reportincident';
 
 let Content = () => {
     let [cont, changeContent] = useState();
 
         return (
         <div className={`content`} >
-            <Userprofile />
-            {/* <Settings />
+            {/* <Userprofile />
+            <Settings />
             <Dashboard />
             <Freshissue />
             <Droneupload />
             <Dronedetails />
             <Appsuccess />
             <Dronedetails2 />
-            <Specificphase /> */}
+            <Specificphase />
+            <Reportincident /> */}
 
         </div>
     )

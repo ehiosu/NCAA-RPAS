@@ -1,10 +1,13 @@
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import { Datepicker} from "flowbite-react";
 import {Link} from 'react-router-dom';
+import {useState} from 'react';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 let Dronedetails = () => {
+    let [startDate, setStartDate] = useState(new Date());
     return (
-        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400">
+        <div className="bg-gradient-to-r from-slate-500 via-orange-200 to-purple-400 min-h-screen">
         <Navbar />
         <Sidebar />
     
@@ -22,9 +25,8 @@ let Dronedetails = () => {
                     <label>Proof of ownership of the RPA</label>
                     <input type="file" className="bg-gray-400 rounded-lg xs:max-lg:w-full" />
                     <label>Date of Birth (16yrs and above)</label>
-                    <Datepicker />
-                    <label>Identification Type</label>
-                            <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2">
+                    <DatePicker className="w-full rounded-lg bg-gray-300 cursor-pointer" showIcon  showYearDropdown dateFormat='dd/MM/yyyy' enableTabLoop={false} selected={startDate} onChange={(date) => setStartDate(date)}  />                    <label>Identification Type</label>
+                            <select id="identification" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2">
                             <option defaultValue>---</option>
                             <option value="passport">International Passport</option>
                             <option value="nin">National Identification Number</option>

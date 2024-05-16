@@ -18,7 +18,7 @@ let Navbar = () => {
          </button>
         <div className="flex ms-2 md:me-24">
           <img src="/images/ncaa.png" className="h-14 w-14 me-3" alt="ncaa logo" />
-          <span className="self-center font-semibold text-xs whitespace-nowrap dark:text-white">Nigerian Civil <br /> Aviation Authority</span>
+          <span className="self-center font-semibold text-xs whitespace-nowrap dark:text-white">Nigeria Civil <br /> Aviation Authority</span>
         </div>
       </div>
       <div className="flex items-center">
@@ -45,7 +45,7 @@ let Navbar = () => {
         <div id="settings" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
     <div className="py-2 text-sm text-gray-700 dark:text-gray-200">
       <Link reloadDocument to='/settings'><p className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer">Profile</p></Link>
-      <p className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Logout</p>
+      <p className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer">Logout</p>
     </div>
       </div>
         </div>

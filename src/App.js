@@ -12,6 +12,10 @@ import Freshissue from './components/Freshissue';
 import Droneupload from './components/Droneupload';
 import Dronedetails from './components/Dronedetails';
 import Settings from './components/Settings';
+import Reportincident from './components/Reportincident';
+import Userprofile from './components/Userprofile';
+import Reselldrone from './components/Reselldrone';
+import Renewcertificate from './components/Renewcertificate';
 
 function App() {
   useEffect(() => {
@@ -30,6 +34,10 @@ function App() {
         <Route path='/droneupload' element={<Droneupload />} />
         <Route path='/dronedetails' element={<Dronedetails />} />
         <Route path='/settings' element={<Settings />} />
+        <Route path='/reportincident' element={<Reportincident />} />
+        <Route path='/userprofile' element={<Userprofile />} />
+        <Route path='/reselldrone' element={<Reselldrone />} />
+        <Route path='/renewcertificate' element={<Renewcertificate />} />
       </Routes>
       </BrowserRouter>
     </div>
