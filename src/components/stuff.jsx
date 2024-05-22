@@ -1,12 +1,5 @@
-import Dashboard from "./Dashboard";
-import Freshissue from "./Freshissue";
-import Dronedetails from './Dronedetails';
-import Droneupload from './Droneupload';
-import Appsuccess from './Appsuccess';
-import Userprofile from './Userprofile';
 import Navbar from './Navbar';
 import Sidebar from "./Sidebar";
-import Dronedetails2 from "./Dronedetails2";
 import Content from "./Content";
 
 // import '../flowbite/dist/flowbite.min.js';
