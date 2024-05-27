@@ -1,7 +1,6 @@
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import { useEffect } from 'react';
-import { initFlowbite } from 'flowbite';
+import {Link} from 'react-router-dom';
 let Dashboard = () => {
     return (
 
@@ -31,7 +30,7 @@ let Dashboard = () => {
 
         <div id="registered" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
          <div className="py-2 text-xs text-gray-700 dark:text-gray-200">
-          <p className="block px-4 py-2 hover:bg-gray-500">View details</p>
+          <Link to='/dronemenu'><p className="block px-4 py-2 hover:bg-gray-500 cursor-pointer">View details</p></Link>
          </div>
         </div>  
     </div>

@@ -3,9 +3,12 @@ import Navbar from "./Navbar";
 import {Nigeria} from './Nigeria';
 import {useState, useRef} from 'react';
 import {Link} from 'react-router-dom';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 
 let Userprofile = () => {
-
+    let [startDate, setStartDate] = useState(new Date());
     let states = Nigeria.map((i) => {
         return i.state;
     });
@@ -77,7 +80,7 @@ let Userprofile = () => {
                             <option value="miss">Miss</option>
                             </select>
                             <label>DOB*</label>
-                            <input type="text" className="rounded-lg" />
+                            <DatePicker className="w-full rounded-lg bg-gray-300 cursor-pointer" showIcon  showYearDropdown dateFormat='dd/MM/yyyy' enableTabLoop={false} selected={startDate} onChange={(date) => setStartDate(date)}  />
                             </div>
                         </form>
 
@@ -103,8 +106,7 @@ let Userprofile = () => {
                 <div className='grid grid-cols-2 space-y-2 items-center'>
                     <label className=''>Mobile Number</label>
                     <div className="flex items-center">
-                    <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="#fff" d="M10 4H22V28H10z"></path><path d="M5,4h6V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" fill="#3b8655"></path><path d="M25,4h6V28h-6c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" transform="rotate(180 26 16)" fill="#3b8655"></path><path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path><path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path></svg>
+                    <div className="flex-shrink-0 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
                    +234
                     </div>
                    <label htmlFor="phone-input" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Phone number:</label>
@@ -115,8 +117,7 @@ let Userprofile = () => {
 
                    <label>Alternate Number</label>
                     <div className="flex items-center">
-                    <div className="flex-shrink-0 z-10 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700  dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="#fff" d="M10 4H22V28H10z"></path><path d="M5,4h6V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" fill="#3b8655"></path><path d="M25,4h6V28h-6c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" transform="rotate(180 26 16)" fill="#3b8655"></path><path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path><path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path></svg>
+                    <div className="flex-shrink-0 inline-flex items-center py-2.5 md:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700  dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
                    +234 
                     </div>
                    <label htmlFor="phone-input" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Phone number:</label>
@@ -151,9 +152,9 @@ let Userprofile = () => {
 
                 <div className='grid grid-cols-2 space-y-2 items-center'>
                 <label htmlFor="email">Email</label>
-                <input type='text' className="rounded-lg" />
+                <input type='email' className="rounded-lg" />
                 <label htmlFor="alt-email">Alternative Email</label>
-                <input type='text' className="rounded-lg" />
+                <input type='email' className="rounded-lg" />
                 <label htmlFor="additional">Additional information</label>
                 <textarea rows="4" className="rounded-lg" />
                 </div>

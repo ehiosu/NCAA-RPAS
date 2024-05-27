@@ -16,6 +16,8 @@ import Reportincident from './components/Reportincident';
 import Userprofile from './components/Userprofile';
 import Reselldrone from './components/Reselldrone';
 import Renewcertificate from './components/Renewcertificate';
+// import Dronemenu from './components/Dronemenu';
+import Dronereg from './components/Dronereg';
 
 function App() {
   useEffect(() => {
@@ -38,6 +40,7 @@ function App() {
         <Route path='/userprofile' element={<Userprofile />} />
         <Route path='/reselldrone' element={<Reselldrone />} />
         <Route path='/renewcertificate' element={<Renewcertificate />} />
+        <Route path='/dronemenu' element={<Dronereg />} />
       </Routes>
       </BrowserRouter>
     </div>

@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
+import {drones} from './dronelist';
 let Reportincident = () => {
     let [startDate, setStartDate] = useState(new Date());
     return (
@@ -24,9 +25,11 @@ let Reportincident = () => {
                         <label>Report incident on</label>
                         <select id="drones" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2">
                             <option defaultValue>---</option>
-                            <option value="passport">Drone 1</option>
-                            <option value="nin">Drone 2</option>
-                            <option value="licence">Drone 3</option>
+                            {
+                                drones.map((i)=> {
+                                    return <option value={i.name}>{i.name}</option>
+                                })
+                            }
                         </select>
                         <label htmlFor="">Upload images of report</label>
                         <input type="file" className="bg-gray-400 rounded-lg xs:max-lg:w-full" />
